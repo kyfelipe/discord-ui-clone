@@ -5,6 +5,7 @@ import { Grid } from './styles';
 import ServerList from '../ServerList';
 import ServerName from '../ServerName';
 import ChannelInfo from '../ChannelInfo';
+import ChannelList from '../ChannelList';
 
 // export default function Layout() { // JS
 //   return (
@@ -18,6 +19,7 @@ const Layout: React.FC = () => {
       <ServerList />
       <ServerName />
       <ChannelInfo />
+      <ChannelList />
     </Grid>
   );
 };
