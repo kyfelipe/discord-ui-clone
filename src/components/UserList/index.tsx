@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { Container, Avatar, User, Role } from './styles';
+import ChannelMessage from '../ChannelMessage';
+import {Messages} from '../ChannelData/styles';
 
 interface UserProps {
   nickname: string;
@@ -29,23 +31,9 @@ const UserList: React.FC = () => {
 
       <Role>Offline - 18</Role>
       <UserRow nickname="Diego Fernandes" isBot />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
-      <UserRow nickname="Fulano" />
+      {Array.from(Array(17).keys()).map((n) => (
+        <UserRow key={n} nickname="Fulano" />
+      ))}
     </Container>
   );
 };
